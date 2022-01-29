@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\ContactFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,10 @@ Route::get('/', function () {
 });
 
 Route::get('tests/test', [TestController::class, 'index']);
+
+Route::get('contact/index', [ContactFormController::class, 'index']);
+
+// Route::group(['prefix' => 'contact', 'middleware' => 'auth'],function);
 
 Auth::routes();
 
