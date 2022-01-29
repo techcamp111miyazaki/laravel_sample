@@ -21,9 +21,9 @@ Route::get('/', function () {
 
 Route::get('tests/test', [TestController::class, 'index']);
 
-Route::get('contact/index', [ContactFormController::class, 'index']);
-
-// Route::group(['prefix' => 'contact', 'middleware' => 'auth'],function);
+Route::group(['prefix' => 'contact', 'middleware' => 'auth'],function(){
+    Route::get('index', [ContactFormController::class, 'index'])->name('contact.index');
+});
 
 Auth::routes();
 
