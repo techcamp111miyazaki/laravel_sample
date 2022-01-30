@@ -25,12 +25,18 @@
 
                     <form method="GET" action="{{route('contact.edit', ['id' => $contact->id ])}}">
                     @csrf
-                       
                         <input class="btn btn-info" type="submit" value="変更する">
+                    </form>
+
+                    <form method="POST" action="{{route('contact.destroy', ['id' => $contact->id ])}}">
+                    @csrf
+                        <input class="btn btn-danger" type="submit" value="削除する">
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 @endsection
