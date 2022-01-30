@@ -26,6 +26,7 @@ Route::group(['prefix' => 'contact', 'middleware' => 'auth'],function(){
     Route::get('create', [ContactFormController::class, 'create'])->name('contact.create');
     Route::post('store', [ContactFormController::class, 'store'])->name('contact.store');
     Route::get('show/{id}', [ContactFormController::class, 'show'])->name('contact.show');
+    Route::get('edit/{id}', [ContactFormController::class, 'edit'])->name('contact.edit');
 });
 
 Auth::routes();

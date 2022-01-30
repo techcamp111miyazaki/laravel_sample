@@ -23,7 +23,7 @@
                     {{ $age }}
                     {{ $contact->contact }}
 
-                    <form method="POST" action="{{route('contact.store')}}">
+                    <form method="GET" action="{{route('contact.edit', ['id' => $contact->id ])}}">
                     @csrf
                        
                         <input class="btn btn-info" type="submit" value="変更する">

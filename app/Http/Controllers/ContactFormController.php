@@ -71,7 +71,7 @@ class ContactFormController extends Controller
      */
     public function show($id)
     {
-        //より深く知るとエロクワント＝＞今回は後者
+        //より深く知るとエロクワント＝＞今回は後者(コレクション)
         $contact = ContactForm::find($id);
 
         if($contact->gender === 0){
@@ -112,6 +112,9 @@ class ContactFormController extends Controller
     public function edit($id)
     {
         //
+        $contact = ContactForm::find($id);
+
+        return view('contact.edit', compact('contact'));
     }
 
     /**
