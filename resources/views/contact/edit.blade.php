@@ -15,7 +15,7 @@
                     @endif
 
                     editです
-                    <form method="POST" action="">
+                    <form method="POST" action="{{route('contact.update', [ 'id' => $contact->id ])}}">
                     @csrf
 
                     氏名
@@ -47,9 +47,6 @@
                         <br>
                         お問い合わせ
                         <textarea name="contact">{{ $contact->contact }}</textarea>
-                        <br>
-
-                        <input type="checkbox" name="caution" value="1">注意事項に同意する
                         <br>
 
                         <input class="btn btn-info" type="submit" value="更新する">
