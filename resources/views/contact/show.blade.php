@@ -14,14 +14,14 @@
                         </div>
                     @endif
 
-                    showです
-                    {{ $contact->your_name }}
-                    {{ $contact->title }}
-                    {{ $contact->email }}
-                    {{ $contact->url }}
-                    {{ $gender }}
-                    {{ $age }}
-                    {{ $contact->contact }}
+                    showです<br>
+                    氏名：{{ $contact->your_name }}<br>
+                    件名：{{ $contact->title }}<br>
+                    Email：{{ $contact->email }}<br>
+                    URL：{{ $contact->url }}<br>
+                    性別：{{ $gender }}<br>
+                    年齢：{{ $age }}<br>
+                    問い合わせ内容：{{ $contact->contact }}
 
                     <form method="GET" action="{{route('contact.edit', ['id' => $contact->id ])}}">
                     @csrf
